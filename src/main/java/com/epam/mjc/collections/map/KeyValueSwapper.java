@@ -8,7 +8,7 @@ public class KeyValueSwapper {
     public Map<String, Integer> swap(Map<Integer, String> sourceMap) {
         Map<String, Integer> hashMap = new LinkedHashMap<>();
         for (Map.Entry<Integer, String> entry: sourceMap.entrySet()) {
-            hashMap.merge(entry.getValue(), entry.getKey(), (k, v)-> entry.getKey()<v? entry.getKey() : v);
+            hashMap.merge(entry.getValue(), entry.getKey(), (k, v)-> v>5 ? 5:v);
         }
         return hashMap;
     }
